@@ -1,0 +1,6 @@
+brew install kafka
+start zookeeper:  zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+start kafka:      kafka-server-start /usr/local/etc/kafka/server.properties
+./producer
+./consumer
+watch -d "kafka-consumer-groups --bootstrap-servers localhost:9092 --describe --all-groups"
