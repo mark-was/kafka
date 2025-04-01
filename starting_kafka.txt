@@ -4,3 +4,6 @@ start kafka:      kafka-server-start /usr/local/etc/kafka/server.properties
 ./producer
 ./consumer
 watch -d "kafka-consumer-groups --bootstrap-servers localhost:9092 --describe --all-groups"
+
+
+kafka-topics --bootstrap-server localhost:9092 --alter --topic events --partitions 3
